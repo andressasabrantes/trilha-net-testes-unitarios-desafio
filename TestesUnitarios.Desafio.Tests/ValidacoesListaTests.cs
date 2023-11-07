@@ -54,19 +54,21 @@ public class ValidacoesListaTests
     public void DeveRetornar9ComoMaiorNumeroDaLista()
     {
         var lista = new List<int> { 5, -1, -8, 9 };
+        var numeroEsperado = 9;
 
         var resultado = _validacoes.RetornarMaiorNumeroLista(lista);
 
-        Assert.Equal(9, resultado);
+        Assert.Equal(numeroEsperado, resultado);
     }
 
     [Fact]
     public void DeveRetornarOitoNegativoComoMenorNumeroDaLista()
     {
         var lista = new List<int> { 5, -1, -8, 9 };
+        var numeroEsperado = -8;
 
         var resultado = _validacoes.RetornarMenorNumeroLista(lista);
 
-        Assert.Equal(-8, resultado);
+        Assert.Equal(numeroEsperado, resultado);
     }
 }
